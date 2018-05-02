@@ -14,10 +14,10 @@ ENV CRONTAB_15MIN='*/15 * * * *' \
     JOB_300_WHAT='backup' \
     JOB_300_WHEN='daily' \
     OPTIONS='' \
-    OPTIONS_EXTRA='--full-if-older-than 1W --file-prefix-archive archive-$(hostname)- --file-prefix-manifest manifest-$(hostname)- --file-prefix-signature signature-$(hostname)- --s3-european-buckets --s3-multipart-chunk-size 10 --s3-use-new-style' \
+    OPTIONS_EXTRA='' \
     SMTP_HOST='smtp' \
     SMTP_PORT='25' \
-    SRC='/mnt/backup/src'
+    SRC='/home/backup'
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint" ]
 CMD ["/usr/sbin/crond", "-fd8"]
