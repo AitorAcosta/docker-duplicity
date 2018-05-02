@@ -17,7 +17,7 @@ ENV CRONTAB_15MIN='*/15 * * * *' \
     OPTIONS_EXTRA='' \
     SMTP_HOST='smtp' \
     SMTP_PORT='25' \
-    SRC='/home/backup'
+    SRC='/mnt/backup'
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint" ]
 CMD ["/usr/sbin/crond", "-fd8"]
