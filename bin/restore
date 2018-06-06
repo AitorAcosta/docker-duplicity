@@ -1,3 +1,3 @@
 #!/bin/sh
 set -x
-exec dup restore "$DST" "$SRC" "$@"
+exec dup restore
